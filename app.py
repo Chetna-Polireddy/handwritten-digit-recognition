@@ -1,5 +1,5 @@
 import streamlit as st
-import tensorflow as tf
+from streamlit_drawable_canvas import st_canvas
 
 st.set_page_config(
     page_title="Handwritten Digit Recognition",
@@ -8,9 +8,17 @@ st.set_page_config(
 
 st.title("🔢 Handwritten Digit Recognition")
 
-st.write("Loading the trained neural network...")
+st.write("Draw a digit from 0 to 9 below:")
 
-model = tf.keras.models.load_model("handwritten_digit_model.keras")
+canvas_result = st_canvas(
+    fill_color="black",
+    stroke_width=15,
+    stroke_color="white",
+    background_color="black",
+    height=280,
+    width=280,
+    drawing_mode="freedraw",
+    key="canvas",
+)
 
-st.success("✅ Neural network loaded successfully!")
-st.write("Model is ready for digit prediction.")
+st.write("Canvas loaded successfully! 🎉")
