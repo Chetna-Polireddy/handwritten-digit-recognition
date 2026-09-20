@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 
 st.set_page_config(
     page_title="Handwritten Digit Recognition",
@@ -7,5 +7,4 @@ st.set_page_config(
 
 st.title("🔢 Handwritten Digit Recognition")
 st.write("The Streamlit app is working! 🎉")
-
 st.success("App loaded successfully.")
