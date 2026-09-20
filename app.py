@@ -59,5 +59,8 @@ if canvas_result.image_data is not None:
 
     st.subheader("📊 Class Probabilities")
 
-    for digit, probability in enumerate(prediction[0]):
-        st.write(f"Digit {digit}: {probability * 100:.2f}%")
+for digit, probability in enumerate(prediction[0]):
+    percentage = float(probability)
+    
+    st.write(f"**Digit {digit}: {percentage * 100:.2f}%**")
+    st.progress(percentage)
