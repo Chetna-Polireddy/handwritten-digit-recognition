@@ -5,8 +5,10 @@ from PIL import Image
 from streamlit_drawable_canvas import st_canvas
 
 # Load trained model
-model = tf.keras.models.load_model("handwritten_digit_model.keras")
-
+model = tf.keras.models.load_model(
+    "handwritten_digit_model.keras",
+    compile=False
+)
 # Page configuration
 st.set_page_config(
     page_title="Handwritten Digit Recognition",
